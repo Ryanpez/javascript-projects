@@ -1,19 +1,23 @@
 //Arrays can hold different data types, even other arrays! A multi-dimensional array is one with entries that are themselves arrays.
 
 //1) Define and initialize the arrays specified in the exercise to hold the name, chemical symbol and mass for different elements.
-
+element7 = ['nitrogen', 'N', 14.007 ];
+element6 = ['carbon', 'C', 12.011];
+element8 = ['oxygen', 'O', 15.999];
 
 element1 = ['hydrogen', 'H', 1.008];
 element2 = ['helium', 'He', 4.003];
 element26 = ['iron', 'Fe', 55.85];
 
 //2) Define the array 'table', and use 'push' to add each of the element arrays to it. Print 'table' to see its structure.
+let essentialElementsTable = [];
 let table = [];
 let tableTwo = [];
 
+essentialElementsTable.push(element7, element6, element8);
 table.push(element1, element2, element26);
 
-tableTwo.push(table);
+tableTwo.push(table, essentialElementsTable);
 
 //3) Use bracket notation to examine the difference between printing 'table' with one index vs. two indices (table[][]).
 console.log(table[1]);
@@ -25,4 +29,4 @@ console.log(table[1][0]);
 console.log(table[2][1]);
 
 //5) 'table' is an example of a 2-dimensional array. The first “level” contains the element arrays, and the second level holds the name/symbol/mass values. Experiment! Create a 3-dimensional array and print out one entry from each level in the array.
-console.log(tableTwo[0][1]);
+console.log(tableTwo[1][1]);
