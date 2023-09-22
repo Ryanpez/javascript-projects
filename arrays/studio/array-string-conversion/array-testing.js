@@ -6,49 +6,64 @@ let protoArray4 = "Comma-spaces, might, require, typing, caution";
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 
 //2) 
-function reverseCommas() {
+function reverseCommas(protoArray) {
 	//TODO: 1. create and instantiate your variables.
-	let check = protoArray1.includes(',');
-	let output = console.log(check);
+	let output;
+	let convertedArray;
+
 	//TODO: 2. write the code required for this step
-	console.log(protoArray1.split(',').reverse().join(','));
+	if (protoArray.includes(',')) {
+		convertedArray = protoArray.split(',');
+		convertedArray.reverse();
+	}
+
+	output = convertedArray.join(',');
 
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
 }
-reverseCommas();
+
 
 //3)
-function semiDash() {
-	let check = protoArray2.includes(';');
-	let output = console.log(check);
+function semiDash(protoArray) {
+	let convertedArray;
+	let output;
 //TODO: write the code required for this step
-console.log(protoArray2.split(';').sort().join('-'));
+if (protoArray.includes(';')) {
+	convertedArray = protoArray.split(';').sort();
+	output = convertedArray.join('-');
+}
   
 	return output;
 }
-//semiDash();
+
 
 //4)
-function reverseSpaces() {
-	let check = protoArray3.includes(' ');
-	let output = console.log(check);
+function reverseSpaces(protoArray) {
+	let convertedArray;
+	let output;
   //TODO: write the code required for this step
-	console.log(protoArray3.split(' ').sort().reverse().join(' '));
+	if (protoArray.includes(' ')) {
+		convertedArray = protoArray.split(' ').sort().reverse();
+		output = convertedArray.join(' ');
+	}
 
 	return output;
 }
-//reverseSpaces();
 
 //5)
-function commaSpace() {
-	let check = protoArray4.includes(', ');
-	let output = console.log(check);
+function commaSpace(protoArray) {
+	let convertedArray;
+	let output;
 	//TODO: write the code required for this step
-	console.log(protoArray4.split(', ').reverse().join(','));
+	if (protoArray.includes(', ')) {
+		convertedArray = protoArray.split(', ').reverse();
+		output = convertedArray.join(', ');
+	}
+
 	return output;
 }
-commaSpace();
+
 
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
