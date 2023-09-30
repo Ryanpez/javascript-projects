@@ -1,4 +1,13 @@
 //Create an anonymous function and set it equal to a variable.
+let triple = function(a) {
+    if (typeof a === 'number') {
+      let tripledNum = a * 3;
+      return console.log(tripledNum);
+    } else if (typeof a === 'string') {
+      return console.log('ARRR!');
+    }
+  };
+  triple(5);
 
 /* Your function should:
 a) If passed a number, return the tripled value.
@@ -13,3 +22,13 @@ c) Print the new array to confirm your work.
 */
 
 let arr = ['Elocution', 21, 'Clean teeth', 100];
+
+let tripled = arr.map(function (a) {
+  if (typeof a === 'number') {
+    return a * 3;
+} else if (typeof a === 'string') {
+    return 'ARRR!';
+}
+});
+
+console.log(tripled);
